@@ -74,6 +74,12 @@ const LatexEditor = () => {
   };
 
   useEffect(() => {
+    if (firstMathfieldRef.current) {
+      firstMathfieldRef.current.focus();
+    }
+  }, []);
+
+  useEffect(() => {
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(value1);
     }

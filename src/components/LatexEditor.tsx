@@ -65,6 +65,7 @@ const LatexEditor = () => {
     if (firstMathfieldRef && firstMathfieldRef.current) {
       firstMathfieldRef.current.latex("");
       setValue1("");
+      firstMathfieldRef.current.focus();
     }
   };
 

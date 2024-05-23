@@ -10,11 +10,12 @@ declare global {
   }
 }
 
+
+export const FirebaseContext = createContext<Analytics | null>(null);
+
 type Props = {
   children: React.ReactNode;
 };
-
-export const FirebaseContext = createContext<Analytics | null>(null);
 
 const FirebaseProvider = ({ children }: Props) => {
   const [tracking, setTracking] = useState<Analytics | null>(null);
